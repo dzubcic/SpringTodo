@@ -1,0 +1,21 @@
+<main>
+    <h1>Spring<span>Todo</span></h1>
+    <p *ngIf="error.length != 0">{{error}}</p>
+    <input maxlength="50" 
+           (keyup.enter)="postTodo()" 
+           (input)="check()" type="text" 
+           [(ngModel)]="contentInput" 
+           placeholder="Create todo...">
+    <h4 *ngIf="todos.length == 0">No todos!</h4>
+    <div *ngFor="let t of todos" (click)="completed(t, $event)">
+        <i class="fa fa-check" [style.color]="doneIcon(t)"></i>
+        <p  (click)="t.completed = false" 
+            (mouseover)="this.edit = true" 
+            (blur)="doneEditing(t, $event)" 
+            (keydown.enter)="doneEditing(t, $event)" 
+            [attr.contenteditable]="this.edit" 
+            [style.text-decoration]="doneText(t)">{{t.cont}}</p>
+        <span (click)="remove(t)">X</span>
+    </div>
+</main>
+

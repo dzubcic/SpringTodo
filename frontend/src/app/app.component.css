@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    transition: all 0.3s;
+}
+main{
+    width: 70%;
+    max-width: 900px;
+    margin: 7px auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+h1{
+    cursor: default;
+    font-family: fantasy;
+    font-size: 60px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    color: #5E165E;
+}
+h1 span{
+    color: white;
+    text-shadow: 1px 3px 7px grey;
+}
+input{
+    width: 100%;
+    font-size: 30px;
+    color: #A4A4A4;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #CDCACA;
+    margin-bottom: 22px;
+}
+input::placeholder{
+    color: #CDCACA;
+}
+input:focus{
+    border-color: purple;
+}
+div{
+    padding-top: 50px;
+    width: 100%;
+    min-height: 90px;
+    box-shadow: 0px 1px 1px #C0C0C0;
+    transition: all 0.1s;
+    text-align: center;
+}
+div:hover{
+    cursor: pointer;
+    box-shadow: 0 10px 14px #9F9F9F, 0 4px 15px #9F9F9F;
+}
+div span{
+    max-width: 500px;
+    word-wrap: break-word;
+}
+div i{
+    margin-left: 15px;
+    font-size: 30px;
+    color: grey;
+    float: left;
+}
+div p{
+    cursor: text;
+    display: inline-block;
+    float: none;
+    font-size: 22px;
+    color: #464646;
+    word-wrap: break-word;
+    max-width: 500px;
+}
+div span{
+    float: right;
+    font-size: 17px;
+    margin-right: 15px;
+    font-family: arial;
+    font-weight: bold;
+    color: red;
+    padding: 9px 14px;
+    border-radius: 50%;
+    border: 1px solid red;    
+}
+div span:hover{
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px red;
+}
+
+@media (max-width: 1000px){
+    main{
+        width: 100%;
+    }
+    div p{
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 550px){
+    main{
+        width: 100%;
+    }
+    div p{
+        max-width: 170px;
+    }
+}
