@@ -1,2 +1,2 @@
 # SpringTodo
-You can add new todos and delete, mark completed or change existing todos.
+You can add new todos, delete, mark completed and change existing todos.
